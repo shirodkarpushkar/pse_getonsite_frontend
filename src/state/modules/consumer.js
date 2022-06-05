@@ -10,9 +10,10 @@ export const actions = {
   async getBookings({ commit }, { data }) {
     try {
       const response = await axios({
-        method: 'post',
-        url: `${backendURL}consumer/getBookings`,
-        data,
+        method: 'get',
+        url: `${backendURL}consumer/bookings`,
+        params: data,
+        paramsSerializer: functions.paramsSerializer,
       })
 
       const result = response.data
