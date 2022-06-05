@@ -130,7 +130,7 @@ export default {
           transactionHash: el.transactionHash,
         }
         const response = await this.getTransactionDetails({ data })
-        this.hashDetails = response.result
+        this.hashDetails = response.data
         this.$jquery('#transactionDetails').modal('show')
         this.hashloader = false
       } catch (error) {

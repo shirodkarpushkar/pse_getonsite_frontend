@@ -694,9 +694,9 @@ export default {
           this.getMachineAvailableStatus(),
           this.getCities(),
         ])
-        this.machineTypes = response[0].result
-        this.machineStatus = response[1].result
-        this.cityList = response[2].result
+        this.machineTypes = response[0].data
+        this.machineStatus = response[1].data
+        this.cityList = response[2].data
       } catch (error) {
         this.$toasted.show(error)
       }
@@ -849,7 +849,7 @@ export default {
         formData.append('image', uploadedFile[0])
         const response = await this.uploadMachineImages({ data: formData })
         this.imageLoader = false
-        this.machine.imageName = response.result.imageName
+        this.machine.imageName = response.data.imageName
         this.$refs.upload.value = ''
         this.$refs.uploadEdit.value = ''
       } catch (error) {

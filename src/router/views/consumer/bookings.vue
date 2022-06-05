@@ -375,7 +375,7 @@ export default {
         const response = await this.getAddressFromLatLng({
           data: this.tmpLatLng,
         })
-        this.templocation = response.result
+        this.templocation = response.data
         this.$refs.confirmMarker.show()
       } catch (error) {
         this.$toasted.show(error)
@@ -475,8 +475,8 @@ export default {
           this.getMachineTypes(),
           this.getCities(),
         ])
-        this.machineTypes = response[0].result
-        this.cityList = response[1].result
+        this.machineTypes = response[0].data
+        this.cityList = response[1].data
       } catch (error) {
         this.$toasted.show(error)
       }
@@ -492,7 +492,7 @@ export default {
           transactionHash: el.transactionHash,
         }
         const response = await this.getTransactionDetails({ data })
-        this.hashDetails = response.result
+        this.hashDetails = response.data
         this.$jquery('#transactionDetails').modal('show')
         this.hashloader = false
       } catch (error) {

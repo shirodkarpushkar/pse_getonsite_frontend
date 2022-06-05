@@ -256,7 +256,7 @@ export default {
         this.buttonLoader = true
         const response = await this.createBooking({ data: this.machine })
         this.buttonLoader = false
-        this.orderId = response.result.orderId
+        this.orderId = response.data.orderId
         this.$jquery('#confirmBooking').modal('hide')
         setTimeout(() => {
           this.$jquery('#bookingConfirmed').modal({
