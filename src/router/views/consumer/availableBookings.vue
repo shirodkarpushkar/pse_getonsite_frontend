@@ -120,7 +120,7 @@
       <h6>Your booking has been confirmed.</h6>
       <h6>Your Booking ID is #{{ orderId }} .</h6>
     </info-modal>
-       <form-modal id="equipmentDetails">
+    <form-modal id="equipmentDetails">
       <template #header
         >Equipment Details
       </template>
@@ -225,8 +225,8 @@ export default {
       try {
         this.tableloader = true
         const res = await this.checkAvailability({ data: this.params })
-        this.availableMachines = res.result.availableMachines
-        this.totalPages = res.result.totalPages
+        this.availableMachines = res.data.availableMachines
+        this.totalPages = res.data.totalPages
         this.tableloader = false
       } catch (error) {
         this.$toasted.show(error)

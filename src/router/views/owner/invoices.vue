@@ -109,8 +109,8 @@ export default {
       try {
         this.tableloader = true
         const res = await this.getOwnerInvoices({ data: this.params })
-        this.invoiceList = res.result.invoiceList
-        this.totalPages = res.result.totalPages
+        this.invoiceList = res.data.invoiceList
+        this.totalPages = res.data.totalPages
         this.tableloader = false
       } catch (error) {
         this.$toasted.show(error)

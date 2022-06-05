@@ -11,7 +11,7 @@ export const actions = {
     try {
       const response = await axios({
         method: 'get',
-        url: `${backendURL}getCities`,
+        url: `${backendURL}cities`,
       })
 
       const result = response.data
@@ -27,8 +27,8 @@ export const actions = {
   async getTransactionDetails({ commit }, { data }) {
     try {
       const response = await axios({
-        method: 'post',
-        url: `${backendURL}getTransactionDetails`,
+        method: 'get',
+        url: `${backendURL}transaction_details`,
         data,
       })
 
@@ -46,7 +46,7 @@ export const actions = {
     try {
       const response = await axios({
         method: 'post',
-        url: `${backendURL}getAddressFromLatLng`,
+        url: `${backendURL}lat_long_address`,
         data,
       })
 
@@ -64,7 +64,7 @@ export const actions = {
     try {
       const response = await axios({
         method: 'get',
-        url: `${backendURL}getProfileInfo`,
+        url: `${backendURL}profile`,
       })
 
       const result = response.data
@@ -81,7 +81,7 @@ export const actions = {
     try {
       const response = await axios({
         method: 'post',
-        url: `${backendURL}setProfileInfo`,
+        url: `${backendURL}profile`,
         data,
       })
 

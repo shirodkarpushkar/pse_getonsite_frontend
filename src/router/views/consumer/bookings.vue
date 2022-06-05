@@ -408,8 +408,8 @@ export default {
       try {
         this.tableloader = true
         const res = await this.getBookings({ data: this.params })
-        this.bookingsList = res.result.bookingsList
-        this.totalPages = res.result.totalPages
+        this.bookingsList = res.data.bookingsList
+        this.totalPages = res.data.totalPages
         this.tableloader = false
       } catch (error) {
         this.$toasted.show(error)

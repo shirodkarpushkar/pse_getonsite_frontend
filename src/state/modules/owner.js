@@ -11,7 +11,7 @@ export const actions = {
     try {
       const response = await axios({
         method: 'get',
-        url: `${backendURL}owner/getMachineType`,
+        url: `${backendURL}owner/machine_types`,
       })
 
       const result = response.data
@@ -28,7 +28,7 @@ export const actions = {
     try {
       const response = await axios({
         method: 'get',
-        url: `${backendURL}owner/getMachineStatus`,
+        url: `${backendURL}owner/machine_status`,
       })
 
       const result = response.data
@@ -45,7 +45,7 @@ export const actions = {
     try {
       const response = await axios({
         method: 'post',
-        url: `${backendURL}owner/addNewMachine`,
+        url: `${backendURL}owner/machines`,
         data,
       })
 
@@ -62,8 +62,8 @@ export const actions = {
   async editMachineById({ commit }, { data }) {
     try {
       const response = await axios({
-        method: 'post',
-        url: `${backendURL}owner/editMachine`,
+        method: 'patch',
+        url: `${backendURL}owner/machines`,
         data,
       })
 
@@ -81,7 +81,7 @@ export const actions = {
     try {
       const response = await axios({
         method: 'get',
-        url: `${backendURL}owner/dashboardOverview`,
+        url: `${backendURL}owner/dashboard`,
       })
 
       const result = response.data
@@ -98,8 +98,9 @@ export const actions = {
     try {
       const response = await axios({
         method: 'post',
-        url: `${backendURL}owner/machineList`,
-        data,
+        url: `${backendURL}owner/machines`,
+        params: data,
+        paramsSerializer: functions.paramsSerializer,
       })
 
       const result = response.data
@@ -115,9 +116,10 @@ export const actions = {
   async getOwnerBookings({ commit }, { data }) {
     try {
       const response = await axios({
-        method: 'post',
-        url: `${backendURL}owner/getBookings`,
-        data,
+        method: 'get',
+        url: `${backendURL}owner/bookings`,
+        params: data,
+        paramsSerializer: functions.paramsSerializer,
       })
 
       const result = response.data
@@ -134,8 +136,9 @@ export const actions = {
     try {
       const response = await axios({
         method: 'post',
-        url: `${backendURL}owner/getInvoice`,
-        data,
+        url: `${backendURL}owner/invoices`,
+        params: data,
+        paramsSerializer: functions.paramsSerializer,
       })
 
       const result = response.data
@@ -151,8 +154,8 @@ export const actions = {
   async deleteMachineById({ commit }, { Id }) {
     try {
       const response = await axios({
-        method: 'post',
-        url: `${backendURL}owner/deleteMachine`,
+        method: 'delete',
+        url: `${backendURL}owner/machines`,
         data: { Id },
       })
 
@@ -170,7 +173,7 @@ export const actions = {
     try {
       const response = await axios({
         method: 'post',
-        url: `${backendURL}owner/uploadMachineImages`,
+        url: `${backendURL}owner/machine_image`,
         data,
         headers: {
           'Content-Type': 'multipart/form-data',

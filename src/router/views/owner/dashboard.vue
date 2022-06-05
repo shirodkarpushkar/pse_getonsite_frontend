@@ -231,18 +231,18 @@ export default {
         this.tableloader = true
 
         const res = await this.getDashboardOverview()
-        const total = res.result.overview.total
+        const total = res.data.overview.total
         this.chartOptions.series[0].data[0].y = Math.floor(
-          (res.result.overview.occupied / total) * 100
+          (res.data.overview.occupied / total) * 100
         )
         this.chartOptions.series[0].data[1].y = Math.floor(
-          (res.result.overview.underRepair / total) * 100
+          (res.data.overview.underRepair / total) * 100
         )
         this.chartOptions.series[0].data[2].y = Math.floor(
-          (res.result.overview.free / total) * 100
+          (res.data.overview.free / total) * 100
         )
-        this.upcomingBookings = res.result.upcomingBookings
-        this.lineChartOptions.series[0].data = res.result.revenueGraph.map(
+        this.upcomingBookings = res.data.upcomingBookings
+        this.lineChartOptions.series[0].data = res.data.revenueGraph.map(
           (el) => el.revenue
         )
         this.tableloader = false

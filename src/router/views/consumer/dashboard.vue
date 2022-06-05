@@ -156,8 +156,8 @@ export default {
       this.tableloader = true
       this.getDashboard()
         .then((res) => {
-          this.upcomingBookings = res.result.upcomingBookings
-          this.chartOptions.series[0].data = res.result.bookingsGraph.map(
+          this.upcomingBookings = res.data.upcomingBookings
+          this.chartOptions.series[0].data = res.data.bookingsGraph.map(
             (el) => el.frequency
           )
           this.tableloader = false

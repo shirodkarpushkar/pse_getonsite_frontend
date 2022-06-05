@@ -141,7 +141,7 @@ export default {
     async getUserProfile() {
       try {
         const res = await this.getProfileInfo()
-        this.user = res.result
+        this.user = res.data
         this.userCpy = JSON.parse(JSON.stringify(this.user))
       } catch (error) {
         this.$toasted.show(error)

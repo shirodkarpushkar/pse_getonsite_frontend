@@ -679,8 +679,8 @@ export default {
       try {
         this.tableloader = true
         const res = await this.getMachineList({ data: this.params })
-        this.machineList = res.result.machineList
-        this.totalPages = res.result.totalPages
+        this.machineList = res.data.machineList
+        this.totalPages = res.data.totalPages
         this.tableloader = false
       } catch (error) {
         this.$toasted.show(error)

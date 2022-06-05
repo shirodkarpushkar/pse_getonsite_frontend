@@ -29,9 +29,10 @@ export const actions = {
   async getInvoices({ commit }, { data }) {
     try {
       const response = await axios({
-        method: 'post',
-        url: `${backendURL}consumer/getInvoice`,
-        data,
+        method: 'get',
+        url: `${backendURL}consumer/invoices`,
+        params: data,
+        paramsSerializer: functions.paramsSerializer,
       })
 
       const result = response.data
@@ -66,7 +67,7 @@ export const actions = {
     try {
       const response = await axios({
         method: 'get',
-        url: `${backendURL}consumer/dashboardAPI`,
+        url: `${backendURL}consumer/dashboard`,
       })
 
       const result = response.data
@@ -83,7 +84,7 @@ export const actions = {
     try {
       const response = await axios({
         method: 'post',
-        url: `${backendURL}consumer/checkAvailability`,
+        url: `${backendURL}consumer/availability`,
         data,
       })
 
