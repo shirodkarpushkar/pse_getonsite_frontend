@@ -1,0 +1,41 @@
+@font-face{
+    font-family: Saira-Black;
+    src: url('../fonts/Saira-Black.ttf');
+}
+@font-face{
+    font-family: Saira-Bold;
+    src: url('../fonts/Saira-Bold.ttf');
+}
+@font-face{
+    font-family: Saira-ExtraBold;
+    src: url('../fonts/Saira-ExtraBold.ttf');
+}
+@font-face{
+    font-family: Saira-ExtraLight;
+    src: url('../fonts/Saira-ExtraLight.ttf');
+}
+@font-face{
+    font-family: Saira-Light;
+    src: url('../fonts/Saira-Light.ttf');
+}
+@font-face{
+    font-family: Saira-Medium;
+    src: url('../fonts/Saira-Medium.ttf');
+}
+@font-face{
+    font-family: Saira-Regular;
+    src: url('../fonts/Saira-Regular.ttf');
+}
+@font-face{
+    font-family: Saira-SemiBold;
+    src: url('../fonts/Saira-SemiBold.ttf');
+}
+@font-face{
+    font-family: Saira-Thin;
+    src: url('../fonts/Saira-Thin.ttf');
+}
+
+@font-face{
+    font-family: Lato-Bold;
+    src: url('../fonts/Lato-Bold.ttf');
+}

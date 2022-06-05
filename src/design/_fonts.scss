@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* modify scss variable of bootstrap */
+$font-family-base: 'Jost', sans-serif ;
+$headings-margin-bottom: 0;
+$input-border-color:#9d9fa1;
+
+$heading-font-family: $font-family-base;
+$heading-font-weight: 600;
+
+$content-font-family: $font-family-base;
+$content-font-weight: 400;
+
+%font-heading {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  color: $color-heading-text;
+}
+
+%font-content {
+  font-family: $content-font-family;
+  font-weight: $content-font-weight;
+  color: $color-text;
+}
