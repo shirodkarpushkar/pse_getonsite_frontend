@@ -19,7 +19,7 @@ export default [
             // If the user is already logged in
             if (store.getters['auth/loggedIn']) {
               const authUser =
-                store.getters['auth/getAuthenticationToken'].result.userInfo
+                store.getters['auth/getAuthenticationToken'].data.userInfo
               if (authUser.role === 'consumer') {
                 next({ name: 'consumer_bookings' })
               } else {

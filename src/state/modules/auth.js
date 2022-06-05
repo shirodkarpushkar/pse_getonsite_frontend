@@ -47,7 +47,7 @@ export const actions = {
       })
 
       const user = userData.data
-      if (user.status.code === '00') {
+      if (user.status === 200) {
         commit('SET_CURRENT_USER_AUTHTOKEN', user)
         return user
       } else {
@@ -89,6 +89,6 @@ function saveState(key, state) {
 
 function setDefaultAuthHeaders(state) {
   axios.defaults.headers.common['auth'] = state.authToken
-    ? state.authToken.result.token
+    ? state.authToken.data.token
     : ''
 }

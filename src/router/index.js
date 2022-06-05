@@ -53,16 +53,16 @@ router.beforeEach((routeTo, routeFrom, next) => {
   // If auth is required and the user is logged in...
 
   if (authRequired && store.getters['auth/loggedIn']) {
-    if (!authUser || !authUser.result.token) {
+    if (!authUser || !authUser.data.token) {
       return redirectToLogin()
     } else if (routeTo.meta.consumerAuth) {
-      if (authUser.result.userInfo.role === 'consumer') {
+      if (authUser.data.userInfo.role === 'consumer') {
         next()
       } else {
         next({ name: 'owner_dashboard' })
       }
     } else if (routeTo.meta.ownerAuth) {
-      if (authUser.result.userInfo.role === 'owner') {
+      if (authUser.data.userInfo.role === 'owner') {
         next()
       } else {
         next({ name: 'consumer_bookings' })

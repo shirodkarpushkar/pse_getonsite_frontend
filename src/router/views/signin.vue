@@ -117,7 +117,7 @@ export default {
         if (!this.$v.$invalid) {
           this.buttonLoader = true
           const res = await this.logIn({ data: this.user })
-          if (res.result.userInfo.role === 'owner') {
+          if (res.data.userInfo.role === 'owner') {
             this.$router.push({ name: 'owner_dashboard' })
           } else {
             this.$router.push({ name: 'consumer_bookings' })

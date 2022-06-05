@@ -15,7 +15,7 @@ export const actions = {
       })
 
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result
@@ -33,7 +33,7 @@ export const actions = {
       })
 
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result
@@ -51,7 +51,7 @@ export const actions = {
       })
 
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result
@@ -68,7 +68,7 @@ export const actions = {
       })
 
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result
@@ -77,16 +77,16 @@ export const actions = {
       throw functions.errorHandler(error)
     }
   },
-  async setProfileInfo({ commit },{data}) {
+  async setProfileInfo({ commit }, { data }) {
     try {
       const response = await axios({
         method: 'post',
         url: `${backendURL}setProfileInfo`,
-        data
+        data,
       })
 
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result

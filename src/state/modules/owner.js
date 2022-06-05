@@ -15,7 +15,7 @@ export const actions = {
       })
 
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result
@@ -32,7 +32,7 @@ export const actions = {
       })
 
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result
@@ -50,7 +50,7 @@ export const actions = {
       })
 
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result
@@ -68,7 +68,7 @@ export const actions = {
       })
 
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result
@@ -85,7 +85,7 @@ export const actions = {
       })
 
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result
@@ -103,7 +103,7 @@ export const actions = {
       })
 
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result
@@ -121,7 +121,7 @@ export const actions = {
       })
 
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result
@@ -139,7 +139,7 @@ export const actions = {
       })
 
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result
@@ -157,7 +157,7 @@ export const actions = {
       })
 
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result
@@ -177,7 +177,7 @@ export const actions = {
         },
       })
       const result = response.data
-      if (result.status.code === '00') {
+      if (result.status === 200) {
         return result
       } else {
         throw result
