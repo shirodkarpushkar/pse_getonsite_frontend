@@ -181,11 +181,11 @@
           </div>
         </div>
 
-        <div class="col-sm-12 text-right ">
+        <!-- <div class="col-sm-12 text-right ">
           <button type="button" class="btn btn-trans mr-b10 " @click="showMaps">
             <map-search></map-search>
           </button>
-        </div>
+        </div> -->
       </form>
       <template #buttons>
         <button
