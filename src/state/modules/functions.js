@@ -3,10 +3,15 @@ import store from '@state/store'
 
 const functions = {
   errorHandler: (err) => {
-    if (err.hasOwnProperty('status') && err.status.code === '03') {
+    if (err.hasOwnProperty('status') && err.status === 401) {
       store.dispatch('auth/logOut')
     }
-    return err.message ? err.message : err.status.message
+    if (err.response && err.response.data) {
+      const message = err.response.data.message
+      return message
+    } else {
+      return err.message
+    }
   },
   paramsSerializer: (params) => {
     return qs.stringify(params, {
