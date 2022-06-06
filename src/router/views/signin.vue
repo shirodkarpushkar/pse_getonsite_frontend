@@ -3,10 +3,9 @@
     <div class="login-img-wrap"></div>
     <div class="login-form-wrap">
       <div class="text-center">
-        <h5>OnSite</h5>
+        <h5>GetOnSite</h5>
         <p>
-          Lej værktøj og maskiner nær dig eller del dit eget, når du ikke bruger
-          det
+          Easy Uberisation of Containers and Heavy Machinery.
         </p>
       </div>
       <form @submit.prevent="signInUser">
