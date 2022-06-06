@@ -29,7 +29,8 @@ export const actions = {
       const response = await axios({
         method: 'get',
         url: `${backendURL}transaction_details`,
-        data,
+        params: data,
+        paramsSerializer: functions.paramsSerializer,
       })
 
       const result = response.data

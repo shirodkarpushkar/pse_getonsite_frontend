@@ -49,7 +49,7 @@ export const actions = {
     try {
       const response = await axios({
         method: 'post',
-        url: `${backendURL}consumer/createBooking`,
+        url: `${backendURL}consumer/bookings`,
         data,
       })
 

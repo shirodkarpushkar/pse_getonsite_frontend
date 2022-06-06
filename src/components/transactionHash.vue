@@ -7,20 +7,12 @@
     <div class="md-table mr-b20">
       <table class="table-box">
         <tbody>
+        
           <tr>
-            <td style="width:30%;color:#000;">
-              Block Number
-            </td>
-            <td style="width:70%"> {{ hash.Block_number }} </td>
+            <td style="width:30%;color:#000;"> Transaction Id </td>
+            <td style="width:70%"> {{ hash.txid }} </td>
           </tr>
-          <tr>
-            <td style="width:30%;color:#000;"> Contract Address </td>
-            <td style="width:70%"> {{ hash.ContractAddress }} </td>
-          </tr>
-          <tr>
-            <td style="width:30%;color:#000;"> Data </td>
-            <td style="width:70%"> {{ hash.Data }} </td>
-          </tr>
+
           <tr v-for="(val, key) in hash.value" :key="key">
             <td style="width:30%;color:#000;"> {{ key | capitalise }} </td>
             <td style="width:70%"> {{ val }} </td>
