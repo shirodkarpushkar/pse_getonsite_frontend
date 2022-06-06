@@ -97,7 +97,7 @@ export const actions = {
   async getMachineList({ commit }, { data }) {
     try {
       const response = await axios({
-        method: 'post',
+        method: 'get',
         url: `${backendURL}owner/machines`,
         params: data,
         paramsSerializer: functions.paramsSerializer,
@@ -135,7 +135,7 @@ export const actions = {
   async getOwnerInvoices({ commit }, { data }) {
     try {
       const response = await axios({
-        method: 'post',
+        method: 'get',
         url: `${backendURL}owner/invoices`,
         params: data,
         paramsSerializer: functions.paramsSerializer,
