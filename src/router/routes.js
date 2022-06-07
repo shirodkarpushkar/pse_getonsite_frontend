@@ -21,7 +21,7 @@ export default [
               const authUser =
                 store.getters['auth/getAuthenticationToken'].data.userInfo
               if (authUser.role === 'consumer') {
-                next({ name: 'consumer_bookings' })
+                next({ name: 'consumer_dashboard' })
               } else {
                 next({ name: 'owner_dashboard' })
               }

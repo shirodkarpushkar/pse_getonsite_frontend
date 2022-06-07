@@ -65,7 +65,7 @@ router.beforeEach((routeTo, routeFrom, next) => {
       if (authUser.data.userInfo.role === 'owner') {
         next()
       } else {
-        next({ name: 'consumer_bookings' })
+        next({ name: 'consumer_dashboard' })
       }
     }
   }

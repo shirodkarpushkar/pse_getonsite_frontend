@@ -12,38 +12,6 @@
           <ul>
             <li>
               <router-link
-                :to="{ name: 'consumer_bookings' }"
-                active-class="active-nav"
-              >
-                <div class="nav-icon">
-                  <svg
-                    width="31"
-                    height="30"
-                    viewBox="0 0 31 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.0467 6.9928H10.6411C10.2164 6.9928 9.80904 7.16152 9.50871 7.46184C9.20839 7.76216 9.03967 8.16949 9.03967 8.59421V21.4055C9.03967 21.8302 9.20839 22.2375 9.50871 22.5378C9.80904 22.8382 10.2164 23.0069 10.6411 23.0069H20.2495C20.6742 23.0069 21.0816 22.8382 21.3819 22.5378C21.6822 22.2375 21.8509 21.8302 21.8509 21.4055V11.797L17.0467 6.9928Z"
-                      stroke="#C7C7C7"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M17.0468 6.99255V11.7968H21.851"
-                      stroke="#C7C7C7"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                Bookings
-              </router-link>
-            </li>
-            <li>
-              <router-link
                 :to="{ name: 'consumer_dashboard' }"
                 active-class="active-nav"
               >
@@ -79,6 +47,38 @@
                   </svg>
                 </div>
                 Dashboard
+              </router-link>
+            </li>
+            <li>
+              <router-link
+                :to="{ name: 'consumer_bookings' }"
+                active-class="active-nav"
+              >
+                <div class="nav-icon">
+                  <svg
+                    width="31"
+                    height="30"
+                    viewBox="0 0 31 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.0467 6.9928H10.6411C10.2164 6.9928 9.80904 7.16152 9.50871 7.46184C9.20839 7.76216 9.03967 8.16949 9.03967 8.59421V21.4055C9.03967 21.8302 9.20839 22.2375 9.50871 22.5378C9.80904 22.8382 10.2164 23.0069 10.6411 23.0069H20.2495C20.6742 23.0069 21.0816 22.8382 21.3819 22.5378C21.6822 22.2375 21.8509 21.8302 21.8509 21.4055V11.797L17.0467 6.9928Z"
+                      stroke="#C7C7C7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17.0468 6.99255V11.7968H21.851"
+                      stroke="#C7C7C7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                Bookings
               </router-link>
             </li>
             <li>

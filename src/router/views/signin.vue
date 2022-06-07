@@ -119,7 +119,7 @@ export default {
           if (res.data.userInfo.role === 'owner') {
             this.$router.push({ name: 'owner_dashboard' })
           } else {
-            this.$router.push({ name: 'consumer_bookings' })
+            this.$router.push({ name: 'consumer_dashboard' })
           }
           // this.$toasted.show(res.status.message, {
           //   icon: 'check_circle',
