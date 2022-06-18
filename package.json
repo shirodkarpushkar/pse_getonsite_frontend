@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build --modern",
+    "build:production": "vue-cli-service build --modern --dest dist --mode=production",
     "new": "hygen new"
   },
   "dependencies": {
