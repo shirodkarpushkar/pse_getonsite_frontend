@@ -1,54 +1,28 @@
-# Boiler Plate for making Vue Applications
+# GetOnSite Web Application
+Easy Uberisation of Containers and Heavy Machinery
 
-[![Actions Status](https://github.com/shirodkarpushkar/vue-boilerplate/workflows/Deploy%20to%20Github%20Pages/badge.svg)](https://github.com/shirodkarpushkar/vue-boilerplate/actions)
+[![Azure Static Web Apps CI/CD](https://github.com/shirodkarpushkar/pse_getonsite_frontend/actions/workflows/azure-static-web-apps-kind-plant-043297f0f.yml/badge.svg)](https://github.com/shirodkarpushkar/pse_getonsite_frontend/actions/workflows/azure-static-web-apps-kind-plant-043297f0f.yml)
 
-View the demo at https://shirodkarpushkar.github.io/vue-boilerplate/
 
-Simple Boiler plate for making large vue applications.
+---
 
-- already contains structured files and folder
-- high scalability
-- Installed with required dependencies
+## Prerequisites
 
-# New Features!
+- [Node.js](https://yarnpkg.com/en/docs/install)
+- [Yarn](https://yarnpkg.com/en/docs/install)
+- [NPM](https://docs.npmjs.com/getting-started/installing-node)
+- [PostgreSQL](https://www.postgresql.org/download/) / [MySQL](https://www.mysql.com/downloads/) / [SQLite](https://www.sqlite.org/download.html)
 
-- Added Jost Google font
-- Provided basic template for starting page
-- template generator
-- custom vs-code snippet
-- override scss variables in src/design
 
-### Dependencies
-
-The following dependies are used to make life lot simpler for Vue developers all packages are at their latest version.
-
-- axios
-- bootstrap
-- command-line-args
-- jquery
-- jsonwebtoken
-- lodash
-- normalize.css
-- nprogress
-- roboto-fontface
-- v-runtime-template
-- vue
-- vue-awesome-swiper
-- vue-image-lightbox
-- vue-lazyload
-- vue-meta
-- vue-multiselect
-- vue-router
-- vue-toasted
-- vuejs-paginate
-- vuelidate
-- vuex
 
 ### Installation
 
 ```bash
 # 1. Clone the repository.
 git clone {REPO_URL}
+
+# 2. Delete git remote.
+rm -rf .git
 
 # 2. Enter your newly-cloned folder.
 cd {PROJECT_DIR}
@@ -59,30 +33,3 @@ yarn
 # 4. Start the development server.
 yarn dev
 ```
-### Template Generator
-
-- To create a vue template
-```
-yarn new view
-```
-- To create a store module
-```
-yarn new module
-```
-- To create a component
-```
-yarn new component
-```
-### Snippets
-
-change snippet as per requirement present in .vscode/_components.code-snippet
-
-### Development
-
-Want to contribute? Great! Pull Request's shall be verified and accepted.
-
-## License
-
-MIT
-
-**Free For All, Hell Yeah!**
